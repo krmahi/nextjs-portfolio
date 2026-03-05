@@ -1,7 +1,9 @@
+import { FloatingNav } from "../components/ui/Floatingnav";
+
 import Hero from "../sections/Hero";
 import Skills from "../sections/Skills";
-import { FloatingNav } from "../components/ui/Floatingnav";
 import GradientBackground from "../components/gradientBackground";
+import Showcase from "../sections/Showcase";
 
 export default function Home() {
   return (
@@ -16,6 +18,7 @@ export default function Home() {
       />
       <Hero />
       <Skills />
+      <Showcase />
     </main>
   );
 }

@@ -1,0 +1,85 @@
+"use client";
+
+import { createContext, useContext, useState, ReactNode } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+
+type AccordionContextType = {
+  openIndex: number | null;
+  setOpenIndex: (index: number | null) => void;
+};
+
+const AccordionContext = createContext<AccordionContextType | null>(null);
+
+// --------------------
+// Accordion Group
+// --------------------
+
+export function AccordionGroup({
+  children,
+  defaultOpen = null,
+}: {
+  children: ReactNode;
+  defaultOpen?: number | null;
+}) {
+  const [openIndex, setOpenIndex] = useState<number | null>(defaultOpen);
+
+  return (
+    <AccordionContext.Provider value={{ openIndex, setOpenIndex }}>
+      <div>{children}</div>
+    </AccordionContext.Provider>
+  );
+}
+
+export function AccordionItem({
+  title,
+  children,
+  index,
+}: {
+  title: string;
+  children: ReactNode;
+  index: number;
+}) {
+  const context = useContext(AccordionContext);
+
+  if (!context) {
+    throw new Error("AccordionItem must be used inside AccordionGroup");
+  }
+
+  const { openIndex, setOpenIndex } = context;
+  const isOpen = openIndex === index;
+
+  return (
+    <div className="border-b border-white/10">
+      {/* Header */}
+      <button
+        onClick={() => setOpenIndex(isOpen ? null : index)}
+        className="py-10"
+      >
+        <h2 className="text-[8.1rem] font-triptych tracking-wide ">{title}</h2>
+      </button>
+
+      {/* Content */}
+      <AnimatePresence initial={false}>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.4, ease: "easeInOut" }}
+            className="overflow-hidden"
+          >
+            <div
+              className="
+          max-h-[min(60vh,500px)]
+          overflow-y-auto 
+          pr-2
+        "
+            >
+              <div className="py-8">{children}</div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
