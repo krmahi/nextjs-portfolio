@@ -70,7 +70,7 @@ export function AccordionItem({
           >
             <div
               className="
-          max-h-[min(60vh,500px)]
+          max-h-[80vh]
           overflow-y-auto 
           pr-2
         "
