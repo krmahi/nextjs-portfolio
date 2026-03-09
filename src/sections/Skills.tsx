@@ -22,7 +22,7 @@ export default function Skills() {
     <RotatingSkill type="tools" angle={270} />,
   ];
   return (
-    <div className="my-10" id="skills">
+    <div className="my-10 text-skills" id="skills">
       <Marquee
         className="text-[9.4rem] font-ppneue"
         gap={60}

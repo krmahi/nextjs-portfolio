@@ -49,7 +49,7 @@ export function AccordionItem({
   const isOpen = openIndex === index;
 
   return (
-    <div className="border-b border-white/10">
+    <div className="text-accordion border-b border-[#F9F6EA]">
       {/* Header */}
       <button
         onClick={() => setOpenIndex(isOpen ? null : index)}
@@ -70,12 +70,12 @@ export function AccordionItem({
           >
             <div
               className="
-          max-h-[80vh]
+          max-h-200
           overflow-y-auto 
-          pr-2
+
         "
             >
-              <div className="py-8">{children}</div>
+              <div>{children}</div>
             </div>
           </motion.div>
         )}
