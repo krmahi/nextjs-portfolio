@@ -9,6 +9,12 @@ const poppins = localFont({
   display: "swap",
 });
 
+const Excon = localFont({
+  src: "../../public/fonts/Excon-Black.otf",
+  variable: "--font-Excon-layout",
+  display: "swap",
+});
+
 const ppNeue = localFont({
   src: "../../public/fonts/ppneuemontreal-book.otf",
   variable: "--font-ppneue-layout",
@@ -46,7 +52,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${ppNeue.variable} ${arrayFont.variable} ${pottaOne.variable} ${triptych.variable} antialiased`}
+      className={`${poppins.variable} ${Excon.variable} ${ppNeue.variable} ${arrayFont.variable} ${pottaOne.variable} ${triptych.variable} antialiased`}
     >
       <body className="overflow-x-hidden">{children}</body>
     </html>

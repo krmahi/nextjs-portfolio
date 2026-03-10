@@ -3,6 +3,7 @@
 :root {
   --background: #d8cfb7;
   --foreground: #776e55;
+  --hero-work: #c7b37e;
   --skills: #44525e;
   --accordion: #8d7227;
 }
@@ -11,12 +12,14 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-skills: var(--skills);
+  --color-hero-work: var(--hero-work);
   --color-accordion: var(--accordion);
   --font-poppins: var(--font-poppins-layout);
   --font-ppneue: var(--font-ppneue-layout);
   --font-array: var(--font-array-layout);
   --font-potta: var(--font-potta-layout);
   --font-triptych: var(--font-triptych-layout);
+  --font-Excon: var(--font-Excon-layout);
   --animate-up-down: up-down 2s ease-in-out infinite;
   --animate-spin-slow: spin 10s linear infinite;
   --animate-spin-slow-reverse: spin 10s linear infinite reverse;
