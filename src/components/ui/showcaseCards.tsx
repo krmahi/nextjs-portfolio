@@ -17,7 +17,7 @@ export default function ShowcaseCard({ images, title }: ShowcaseCardProps) {
       transition={{ duration: 0.5, ease: "easeOut" }}
       viewport={{ once: true }}
       whileHover={{ scale: 1.01, y: -6 }}
-      className="grid grid-cols-[repeat(auto-fit,minmax(320px,1fr))] gap-6 relative h-187.5 rounded-2xl overflow-hidden bg-foreground my-14 mx-23 p-14"
+      className="grid grid-cols-[repeat(auto-fit,minmax(22vw,1fr))] gap-[2vw] relative h-[44vw] rounded-2xl overflow-hidden bg-foreground my-[3vw] mx-[4vw] p-[3vw] will-change-transform"
     >
       {images.map((image, index) => (
         <div key={index} className="relative overflow-hidden rounded-2xl">

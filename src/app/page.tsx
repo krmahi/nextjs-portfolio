@@ -5,15 +5,14 @@ import Skills from "../sections/Skills";
 import Showcase from "../sections/Showcase";
 
 export default function Home() {
+  const navItems = [
+    { name: "Home", link: "#home" },
+    { name: "Skills", link: "#skills" },
+    { name: "Showcase", link: "#showcase" },
+  ];
   return (
     <main className="flex flex-col text-center justify-center">
-      <FloatingNav
-        navItems={[
-          { name: "Home", link: "#home" },
-          { name: "Skills", link: "#skills" },
-          { name: "Showcase", link: "#showcase" },
-        ]}
-      />
+      <FloatingNav navItems={navItems} />
       <Hero />
       <Skills />
       <Showcase />

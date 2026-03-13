@@ -22,10 +22,10 @@ export default function Skills() {
     <RotatingSkill type="tools" angle={270} />,
   ];
   return (
-    <div className="my-10 text-skills" id="skills">
+    <div className="my-[2vw] text-skills" id="skills">
       <Marquee
-        className="text-[9.4rem] font-ppneue"
-        gap={60}
+        className="text-[8vw] font-ppneue"
+        gap={3}
         // fadeEdges
         // fadeWidth={500}
         speed={70}
@@ -36,8 +36,8 @@ export default function Skills() {
         ))}
       </Marquee>
       <Marquee
-        className="text-[7.5rem] -my-15.5 font-ppneue"
-        gap={10}
+        className="text-[6.3vw] -translate-y-[3vw] font-ppneue"
+        gap={3}
         // fadeEdges
         // fadeWidth={500}
         speed={70}

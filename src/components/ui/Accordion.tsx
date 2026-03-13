@@ -53,9 +53,9 @@ export function AccordionItem({
       {/* Header */}
       <button
         onClick={() => setOpenIndex(isOpen ? null : index)}
-        className="py-10"
+        className="py-[2.1vw]"
       >
-        <h2 className="text-[8.1rem] font-triptych tracking-wide ">{title}</h2>
+        <h2 className="text-[7vw] font-triptych tracking-wide ">{title}</h2>
       </button>
 
       {/* Content */}
@@ -70,9 +70,8 @@ export function AccordionItem({
           >
             <div
               className="
-          max-h-200
+          max-h-[43vw]
           overflow-y-auto 
-
         "
             >
               <div>{children}</div>

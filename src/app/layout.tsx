@@ -1,6 +1,7 @@
 import "./globals.css";
 import localFont from "next/font/local";
 import type { Metadata } from "next";
+// import SmoothScroll from "../lib/lenisScroll";
 
 // fonts
 const poppins = localFont({
@@ -52,7 +53,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${poppins.variable} ${Excon.variable} ${ppNeue.variable} ${arrayFont.variable} ${pottaOne.variable} ${triptych.variable} antialiased`}
+      className={`${poppins.variable} ${Excon.variable} ${ppNeue.variable} ${arrayFont.variable} ${pottaOne.variable} ${triptych.variable} antialiased scroll-smooth`}
     >
       <body className="overflow-x-hidden">{children}</body>
     </html>

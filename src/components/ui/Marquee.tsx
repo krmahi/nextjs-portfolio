@@ -27,7 +27,7 @@ export function Marquee({
   className,
   fadeEdges = false,
   fadeWidth = 64,
-  pauseOnTap = true,
+  pauseOnTap = false,
   draggable = true,
 }: MarqueeProps) {
   const [currentSpeed, setCurrentSpeed] = useState(speed);
@@ -219,7 +219,7 @@ export function Marquee({
             ? { x: translation }
             : { y: translation }),
           flexDirection: direction === "horizontal" ? "row" : "column",
-          gap: `${gap}px`,
+          gap: `${gap}vw`,
         }}
         ref={containerRef}
         {...hoverProps}

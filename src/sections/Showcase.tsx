@@ -4,8 +4,8 @@ import ShowcaseGrid from "../components/showcaseGrids";
 
 export default function showcase() {
   return (
-    <div className="my-10">
-      <div className="font-potta text-[17.5rem]">SHOWCASE</div>
+    <section className="-my-[4vw]">
+      <div className="font-potta text-[15vw]">SHOWCASE</div>
       <AccordionGroup>
         <AccordionItem title="Graphics..Arts" index={0}>
           <ShowcaseGrid />
@@ -19,6 +19,6 @@ export default function showcase() {
           <ShowcaseGrid />
         </AccordionItem>
       </AccordionGroup>
-    </div>
+    </section>
   );
 }

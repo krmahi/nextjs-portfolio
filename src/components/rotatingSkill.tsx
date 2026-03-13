@@ -16,7 +16,7 @@ export default function RotatingSkill({
   return (
     <Image
       style={{ "--rotate-angle": `${angle}deg` } as React.CSSProperties}
-      className={`rotate-(--rotate-angle) ${reverse ? "animate-spin-slow-reverse" : "animate-spin-slow"}`}
+      className={`w-[6vw] object-contain rotate-(--rotate-angle) ${reverse ? "animate-spin-slow-reverse" : "animate-spin-slow"}`}
       src={src}
       alt={type}
     />
