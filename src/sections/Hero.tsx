@@ -13,7 +13,7 @@ export default function Hero() {
           <span>kr</span>
         </div>
 
-        <div className="flex flex-col text-[9vw] text-hero-work [writing-mode:vertical-rl] rotate-180 leading-none -translate-x-[0.5vw] items-start">
+        <div className="flex flex-col text-[9vw] [writing-mode:vertical-rl] rotate-180 leading-none -translate-x-[0.5vw] items-start">
           <span>design</span>
           <span>recreate</span>
           <span>develop</span>

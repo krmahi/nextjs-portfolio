@@ -25,7 +25,7 @@ export function AccordionGroup({
 
   return (
     <AccordionContext.Provider value={{ openIndex, setOpenIndex }}>
-      <div>{children}</div>
+      <div className="mb-[6vw]">{children}</div>
     </AccordionContext.Provider>
   );
 }
@@ -49,13 +49,13 @@ export function AccordionItem({
   const isOpen = openIndex === index;
 
   return (
-    <div className="text-accordion border-b border-[#F9F6EA]">
+    <div className="border-b-[0.1vw] border-[#D8CFB7] ">
       {/* Header */}
       <button
         onClick={() => setOpenIndex(isOpen ? null : index)}
         className="py-[2.1vw]"
       >
-        <h2 className="text-[7vw] font-triptych tracking-wide ">{title}</h2>
+        <h2 className="text-[6.4vw] font-triptych tracking-wide ">{title}</h2>
       </button>
 
       {/* Content */}
@@ -66,12 +66,11 @@ export function AccordionItem({
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4, ease: "easeInOut" }}
-            className="overflow-hidden"
           >
             <div
               className="
-          max-h-[43vw]
-          overflow-y-auto 
+          max-h-[50vw]
+          overflow-y-auto
         "
             >
               <div>{children}</div>

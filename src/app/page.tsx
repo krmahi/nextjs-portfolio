@@ -3,6 +3,7 @@ import { FloatingNav } from "../components/ui/Floatingnav";
 import Hero from "../sections/Hero";
 import Skills from "../sections/Skills";
 import Showcase from "../sections/Showcase";
+import Footer from "../sections/footer";
 
 export default function Home() {
   const navItems = [
@@ -16,6 +17,7 @@ export default function Home() {
       <Hero />
       <Skills />
       <Showcase />
+      <Footer />
     </main>
   );
 }

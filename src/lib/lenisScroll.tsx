@@ -1,26 +1,35 @@
 "use client";
-
 import Lenis from "lenis";
 import { useEffect } from "react";
 
-export default function SmoothScroll() {
+export function useLenisScroll(
+  ref?: React.RefObject<HTMLElement | null>,
+  isInner = false,
+) {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.2,
+      wrapper: ref?.current || window,
+      content: ref?.current || document.documentElement,
+      lerp: isInner ? 0.15 : 0.08,
       smoothWheel: true,
+      allowNestedScroll: true,
+      overscroll: false,
+      autoResize: true,
+      wheelMultiplier: 0.7,
     });
 
-    function raf(time: number) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
+    let rafId: number;
 
-    requestAnimationFrame(raf);
+    const raf = (time: number) => {
+      lenis.raf(time);
+      rafId = requestAnimationFrame(raf);
+    };
+
+    rafId = requestAnimationFrame(raf);
 
     return () => {
+      cancelAnimationFrame(rafId);
       lenis.destroy();
     };
-  }, []);
-
-  return null;
+  }, [ref]);
 }
